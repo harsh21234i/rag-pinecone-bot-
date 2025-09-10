@@ -1,7 +1,7 @@
 import streamlit as st
 from rag import answer_question_hf
 
-st.title("📄 PDF RAG Chatbot (Hugging Face)")
+st.title(" PDF RAG Chatbot (Hugging Face)")
 
 namespace = st.text_input("Namespace (for Pinecone):", "default")
 question = st.text_input("Ask a question about the PDF:")

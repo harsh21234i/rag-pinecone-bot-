@@ -1,7 +1,7 @@
+streamlit
+python-dotenv
+pinecone-client>=3.0.0
 sentence-transformers
 transformers
 torch
-pinecone
 pypdf
-streamlit
-python-dotenv
