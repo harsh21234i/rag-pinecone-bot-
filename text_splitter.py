@@ -1,24 +1,9 @@
-from typing import List, Dict
+from typing import List
 
-def chunk_text(text: str, chunk_size: int = 1200, chunk_overlap: int = 200) -> List[str]:
-    """
-    Simple character-based splitter with overlap.
-    """
-    if chunk_overlap >= chunk_size:
-        raise ValueError("chunk_overlap must be < chunk_size")
+def chunk_text(text: str, chunk_size: int = 500) -> List[str]:
+    """Split text into chunks of `chunk_size` words."""
+    words = text.split()
     chunks = []
-    start = 0
-    n = len(text)
-    while start < n:
-        end = min(start + chunk_size, n)
-        chunk = text[start:end].strip()
-        if chunk:
-            chunks.append(chunk)
-        start = end - chunk_overlap
-        if start < 0:
-            start = 0
-        if start >= n:
-            break
-        if end == n:
-            break
+    for i in range(0, len(words), chunk_size):
+        chunks.append(" ".join(words[i:i+chunk_size]))
     return chunks

@@ -1,7 +1,7 @@
-streamlit==1.38.0
-pypdf==5.0.1
-python-dotenv==1.0.1
-tiktoken==0.7.0
-openai==1.51.2
-pinecone-client==5.0.1
-tenacity==9.0.0
+sentence-transformers
+transformers
+torch
+pinecone
+pypdf
+streamlit
+python-dotenv
